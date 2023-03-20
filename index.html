@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="head">
+    <div class="top">
+        <img src="./8537-removebg-preview.png" width="500px" alt="">
+    </div>
+    <div class="heading">
+        <h1 class="heading-1">JavaScript: </h1>
+        <h1 class="heading-2">Decision Making</h1>
+    </div>
+    <div class="bottom">
+        <img src="./85374-removebg-preview.png" width="800px" alt="">
+    </div>
+    </div>
+    <div class="main">
+    <div class="box">
+        <h3>Find the Smaller Angle</h3>
+        <pre>
+            var Minimal_Angle = (h, m) => 
+            {
+                   h=h%12;
+                   let hour = (h*360)/12 + (m*360)/(12*60);
+                   let min = (m*360)/60;
+                   let angle = Math.abs(hour-min);
+                   
+                   if(angle>180)
+                   return 360-angle;
+                   else
+                   return angle;
+            };
+        </pre>
+    </div>
+    <div class="box">
+        <h3>Check whether the year is Leap year or not.</h3>
+        <pre>
+            var Check_Leap = (year) => 
+            {
+              if (year % 400===0 && year%100 ===0){
+                return 'Leap Year'
+              }
+              else if (year%4===0 && year%100 !==0){
+                
+                return 'Leap Year'
+              }
+              else{
+                return "Non Leap Year"
+              }       
+            };
+        </pre>
+    </div>
+    <div class="box">
+        <h3>Perfect Number Check</h3>
+        <pre>
+            var Perfect_Check = (N) => 
+            {
+              let sum = 0;
+                  for(i=0;i<=N;i++){
+                    if(N%i===0){
+                    sum = sum+i;
+                  }
+                }
+                if (sum===N){
+                  return "YES";
+                }
+                else{
+                  return "NO";
+                }
+            };
+        </pre>
+    </div>
+    <div class="box">
+        <h3>Reverse the Number</h3>
+        <pre>
+            var Reverse_Number = (N) => 
+            {
+              let result = 0;
+              while(N>0){
+                rightmostNo = N%10;
+                result = result*10+rightmostNo;
+                N=Math.floor(N/10);
+              }
+              return result;
+            
+            };
+        </pre>
+    </div>
+    <div class="box">
+        <h3>Substring Check</h3>
+        <pre>
+            var Substring_Check = (S1, S2) => 
+            {
+              let result = S1.indexOf(S2);
+              if(result!==-1){
+                return "YES";
+              }
+              else{
+                return "NO"
+              }
+            };
+        </pre>
+    </div>
+   
+    </div>
+</body>
+</html>
